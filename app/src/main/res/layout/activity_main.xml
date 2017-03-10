@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,36 +10,40 @@
         android:id="@+id/zahl1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="81dp" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/zahl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/zahl1"
+        android:layout_below="@+id/zahl1"
+        android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="143dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Divide!"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="114dp"
-        android:onClick="divide"
-        />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/ergebnis"
-        android:layout_width="315dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="274dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@+id/divide"
+        android:layout_alignStart="@+id/zahl2" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zahl2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Divide!"
+        android:onClick = "divide"
+        />
+</RelativeLayout>

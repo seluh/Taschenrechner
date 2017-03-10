@@ -12,5 +12,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void divide (View view){
+        EditText z1 = (EditText) findViewById(R.id.zahl1);
+        EditText z2 = (EditText) findViewById(R.id.zahl2);
+        EditText z3 = (EditText) findViewById(R.id.ergebnis);
 
+        int a = Integer.parseInt(z1.getText().toString());
+        int b = Integer.parseInt(z2.getText().toString());
+
+        int e = a/b;
+
+        z3.setText(String.valueOf(e));
+
+    }
 }
