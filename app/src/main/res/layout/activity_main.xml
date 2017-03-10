@@ -51,30 +51,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/zahl1"
-        android:layout_alignBottom="@+id/zahl1"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="19dp"
-        android:text="Dividend" />
+        android:text="Dividend"
+        android:layout_below="@+id/zahl1"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Divisor"
-        android:layout_alignBaseline="@+id/zahl2"
-        android:layout_alignBottom="@+id/zahl2"
+        android:layout_below="@+id/zahl2"
         android:layout_alignStart="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ergebnis"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="14dp"
-        android:layout_marginStart="7dp"
-        android:text="Ergebnis" />
+        android:text="Ergebnis"
+        android:layout_below="@+id/ergebnis"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

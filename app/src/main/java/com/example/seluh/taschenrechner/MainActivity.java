@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             z3.setText(String.valueOf(c));
         }
         catch (Exception e){
-            z3.setText("Division durch 0 nicht möglich!");
+            z3.setText("ERROR");
         }
 
 
