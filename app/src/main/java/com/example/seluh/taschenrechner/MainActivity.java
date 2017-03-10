@@ -20,9 +20,14 @@ public class MainActivity extends AppCompatActivity {
         int a = Integer.parseInt(z1.getText().toString());
         int b = Integer.parseInt(z2.getText().toString());
 
-        int e = a/b;
+        try {
+            int c = a / b;
+            z3.setText(String.valueOf(c));
+        }
+        catch (Exception e){
+            z3.setText("Division durch 0 nicht möglich!");
+        }
 
-        z3.setText(String.valueOf(e));
 
     }
 }
