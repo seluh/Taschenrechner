@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/zahl2"
@@ -24,17 +24,17 @@
         android:layout_below="@+id/zahl1"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/ergebnis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/zahl2"
+        android:layout_below="@+id/divide"
         android:layout_marginTop="63dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_below="@+id/divide"
-        android:layout_alignStart="@+id/zahl2" />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/divide"
@@ -46,4 +46,35 @@
         android:text="Divide!"
         android:onClick = "divide"
         />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zahl1"
+        android:layout_alignBottom="@+id/zahl1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:text="Dividend" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divisor"
+        android:layout_alignBaseline="@+id/zahl2"
+        android:layout_alignBottom="@+id/zahl2"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ergebnis"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="7dp"
+        android:text="Ergebnis" />
+
 </RelativeLayout>
