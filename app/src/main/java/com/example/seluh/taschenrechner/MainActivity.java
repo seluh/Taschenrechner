@@ -4,6 +4,10 @@ package com.example.seluh.taschenrechner;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.EditText;
+        import android.widget.TextView;
+
+        import static java.lang.Double.parseDouble;
+        import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,24 +23,26 @@ public class MainActivity extends AppCompatActivity {
 
         EditText z1 = (EditText) findViewById(R.id.zahl1);
         EditText z2 = (EditText) findViewById(R.id.zahl2);
-        EditText z3 = (EditText) findViewById(R.id.ergebnis);
+        TextView z3 = (TextView) findViewById(R.id.ergebnis);
 
-        double a = Integer.parseInt(z1.getText().toString());
-        double b = Integer.parseInt(z2.getText().toString());
-        if (b == 0) {
-            z3.setText("Divisor should not be 0");
-        } else {
-            try {
-                double c = a / b;
-                z3.setText(String.valueOf(c));
+        try {
+            double a = Double.parseDouble(z1.getText().toString());
+            double b = Double.parseDouble(z2.getText().toString());
 
-            } catch (Exception e) {
-
-                z3.setText("ERROR!");
+            if (b == 0) {
+                z3.setText("Divisor should not be 0");
+            } else {
+                    double c = a / b;
+                    z3.setText(String.valueOf(c));
+                }
             }
+            catch (Exception e) {
+                z3.setText("Not a number");
+            }
+            finally {
+            z1.setText("");
+            z2.setText("");
         }
-        z1.setText("");
-        z2.setText("");
-    }
 
+    }
 }

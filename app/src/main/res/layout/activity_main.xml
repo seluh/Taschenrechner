@@ -10,11 +10,12 @@
         android:id="@+id/zahl1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="57dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
+        android:layout_marginEnd="20dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/zahl2"
@@ -22,53 +23,47 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number|numberDecimal"
-        android:layout_below="@+id/textView"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/zahl1"
         android:layout_alignStart="@+id/zahl1" />
-
-    <EditText
-        android:id="@+id/ergebnis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        android:layout_below="@+id/divide"
-        android:layout_alignStart="@+id/zahl2" />
 
     <Button
         android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Divide!"
-        android:onClick = "divide"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="45dp"
+        android:onClick="divide"
+        android:text="="
+        android:layout_below="@+id/zahl2"
+        android:layout_toStartOf="@+id/zahl2" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dividend"
-        android:layout_below="@+id/zahl1"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBaseline="@+id/zahl1"
+        android:layout_alignBottom="@+id/zahl1"
+        android:layout_toStartOf="@+id/zahl1"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Divisor"
-        android:layout_below="@+id/zahl2"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp" />
+        android:layout_alignBaseline="@+id/zahl2"
+        android:layout_alignBottom="@+id/zahl2"
+        android:layout_alignStart="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/ergebnis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ergebnis"
-        android:layout_below="@+id/ergebnis"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBaseline="@+id/divide"
+        android:layout_alignBottom="@+id/divide"
+        android:layout_marginStart="35dp"
+        android:layout_toEndOf="@+id/divide"
+        android:textAppearance="@android:style/TextAppearance.Large" />
 
 </RelativeLayout>
