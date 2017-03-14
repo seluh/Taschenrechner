@@ -10,42 +10,40 @@
         android:id="@+id/zahl1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number|numberDecimal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/zahl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/zahl1"
-        android:layout_below="@+id/zahl1"
-        android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number|numberDecimal"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/zahl1" />
 
     <EditText
         android:id="@+id/ergebnis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/zahl2"
-        android:layout_below="@+id/divide"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number|numberDecimal"
+        android:layout_below="@+id/divide"
+        android:layout_alignStart="@+id/zahl2" />
 
     <Button
         android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/zahl2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="11dp"
         android:text="Divide!"
         android:onClick = "divide"
-        />
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView"
