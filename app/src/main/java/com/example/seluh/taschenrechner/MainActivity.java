@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void divide(View view) {
+    public void divide(View view) {         //onClick action
 
         EditText z1 = (EditText) findViewById(R.id.zahl1);
         EditText z2 = (EditText) findViewById(R.id.zahl2);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             catch (Exception e) {
                 z3.setText("Not a number");
             }
-            finally {
+            finally {       //clean up
             z1.setText("");
             z2.setText("");
         }
